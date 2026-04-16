@@ -581,7 +581,11 @@ p.is--xs{font-size:.825em;line-height:1.4;}
 .footer__top{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:var(--gap);margin-bottom:2em;}
 @media(max-width:991px){.footer__top{grid-template-columns:1fr 1fr;}}
 @media(max-width:767px){.footer__top{grid-template-columns:1fr;}}
-.footer__col-brand img{height:1.75em;margin-bottom:.75em;}
+.footer__col-brand img{
+  height:1.75em;
+  width:auto;
+  margin-bottom:.75em;
+}
 .footer__col-label{
   font-size:.75em;font-weight:500;letter-spacing:.08em;text-transform:uppercase;
   color:var(--color-text-muted);margin-bottom:.5em;display:inline-block;

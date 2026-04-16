@@ -6,10 +6,6 @@
   <title>Buf Company — Digital Scale with Intelligence</title>
   <meta name="description" content="Buf Company is the agency specialist in digital scale. Paid traffic, marketing strategy, and technology focused on ROI.">
   
-  <!-- Preload Critical Video Assets -->
-  <link rel="preload" href="bg-desktop.mp4" as="video" type="video/mp4">
-  <link rel="preload" href="bg-mobile.mp4" as="video" type="video/mp4">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
@@ -36,7 +32,7 @@
     <div class="nav__inner">
       <div class="nav__left">
         <a href="#" class="nav__logo">
-          <img src="logo.png" alt="Buf Company" id="nav-logo">
+          <img src="logo.png" alt="Buf Company" id="nav-logo" width="358" height="178" decoding="async">
         </a>
       </div>
       <div class="nav__right" id="nav-menu">
@@ -56,10 +52,10 @@
   <!-- ══════════ HERO — Video BG + bottom-left text ══════════ -->
   <section class="hero" id="hero">
     <div class="hero__video-wrap">
-      <video class="hero__video hero__video--desktop" autoplay muted loop playsinline preload="auto">
+      <video class="hero__video hero__video--desktop" autoplay muted loop playsinline preload="metadata">
         <source src="bg-desktop.mp4" type="video/mp4">
       </video>
-      <video class="hero__video hero__video--mobile" autoplay muted loop playsinline preload="auto">
+      <video class="hero__video hero__video--mobile" autoplay muted loop playsinline preload="metadata">
         <source src="bg-mobile.mp4" type="video/mp4">
       </video>
       <div class="hero__overlay"></div>
@@ -111,7 +107,7 @@
       <div class="home-intro__row-cards">
         <div class="home-intro__card is--1">
           <div class="home-intro__card-before"></div>
-          <div class="thesis-card__bg" style="background-image: url('assets/bg-midia-paga.png');"></div>
+          <div class="thesis-card__bg" style="background-image: url('assets/bg-midia-paga.webp');"></div>
           <div class="thesis-card__gradient"></div>
           <div class="home-intro__card-border"></div>
           <div class="home-intro__card-content">
@@ -124,7 +120,7 @@
         
         <div class="home-intro__card is--2">
           <div class="home-intro__card-before"></div>
-          <div class="thesis-card__bg" style="background-image: url('assets/bg-strategy.png');"></div>
+          <div class="thesis-card__bg" style="background-image: url('assets/bg-strategy.webp');"></div>
           <div class="thesis-card__gradient"></div>
           <div class="home-intro__card-border"></div>
           <div class="home-intro__card-content">
@@ -137,7 +133,7 @@
 
         <div class="home-intro__card is--3">
           <div class="home-intro__card-before"></div>
-          <div class="thesis-card__bg" style="background-image: url('assets/bg-dev.png');"></div>
+          <div class="thesis-card__bg" style="background-image: url('assets/bg-dev.webp');"></div>
           <div class="thesis-card__gradient"></div>
           <div class="home-intro__card-border"></div>
           <div class="home-intro__card-content">
@@ -150,7 +146,7 @@
 
         <div class="home-intro__card is--4">
           <div class="home-intro__card-before"></div>
-          <div class="thesis-card__bg" style="background-image: url('assets/bg-data.png');"></div>
+          <div class="thesis-card__bg" style="background-image: url('assets/bg-data.webp');"></div>
           <div class="thesis-card__gradient"></div>
           <div class="home-intro__card-border"></div>
           <div class="home-intro__card-content">
@@ -163,7 +159,7 @@
 
         <div class="home-intro__card is--5">
           <div class="home-intro__card-before"></div>
-          <div class="thesis-card__bg" style="background-image: url('assets/bg-automation.png');"></div>
+          <div class="thesis-card__bg" style="background-image: url('assets/bg-automation.webp');"></div>
           <div class="thesis-card__gradient"></div>
           <div class="home-intro__card-border"></div>
           <div class="home-intro__card-content">
@@ -190,7 +186,7 @@
         <div class="offerings__visual gsap-fade">
           <div class="corner corner--tl"></div><div class="corner corner--br"></div>
           <div class="offerings__visual-glow"></div>
-          <img src="assets/office_photo.png" alt="Buf Company Office" class="is--cover">
+          <img src="assets/office_photo.webp" alt="Buf Company Office" class="is--cover" width="1024" height="1024" loading="lazy" decoding="async">
         </div>
         <div class="offerings__text gsap-fade">
           <h4>Your Digital<br>Scale Partner</h4>
@@ -326,10 +322,10 @@
   <!-- ══════════ CTA — Dual ══════════ -->
   <section class="section section--surface" id="contato">
     <div class="cta__video-wrap">
-      <video class="hero__video hero__video--desktop" autoplay muted loop playsinline preload="auto">
+      <video class="hero__video hero__video--desktop" autoplay muted loop playsinline preload="none">
         <source src="bg-desktop.mp4" type="video/mp4">
       </video>
-      <video class="hero__video hero__video--mobile" autoplay muted loop playsinline preload="auto">
+      <video class="hero__video hero__video--mobile" autoplay muted loop playsinline preload="none">
         <source src="bg-mobile.mp4" type="video/mp4">
       </video>
       <div class="cta__overlay"></div>
@@ -365,7 +361,7 @@
         </div>
         <div>
           <span class="footer__col-label">WhatsApp</span><br><br>
-          <a href="https://wa.me/5500000000000" target="_blank" class="footer__col-link">Start chat</a>
+          <a href="https://wa.me/16507853440" target="_blank" class="footer__col-link">Start chat</a>
         </div>
       </div>
       <p class="footer__disclaimer">This website is a general communication intended for informational purposes only and should not be interpreted as advice or recommendation. The results obtained may vary depending on each client's sector, investment, and market context.</p>
@@ -528,39 +524,53 @@
     
     document.body.style.overflow = 'hidden'; // Lock scroll
 
-    const preTl = gsap.timeline();
-    preTl
-      .to(preloaderLogo, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
-      .to(preloaderBar, { width: '40%', duration: 1, ease: 'power1.inOut' })
-      .to(preloaderBar, { width: '85%', duration: 3, ease: 'linear' }); // Slower crawl for real-ish feel
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let preloaderDone = false;
 
-    window.addEventListener('load', () => {
-      gsap.to(preloaderBar, { 
-        width: '100%', 
-        duration: 0.4, 
+    const finishPreloader = () => {
+      if (preloaderDone) return;
+      preloaderDone = true;
+
+      gsap.to(preloaderBar, {
+        width: '100%',
+        duration: 0.22,
         ease: 'power2.out',
         onComplete: () => {
-          gsap.to([preloaderLogo, preloaderBar.parentElement], { 
-            opacity: 0, 
-            y: -10, 
-            duration: 0.5, 
-            ease: 'power3.in' 
+          gsap.to([preloaderLogo, preloaderBar.parentElement], {
+            opacity: 0,
+            y: -8,
+            duration: 0.28,
+            ease: 'power2.in'
           });
-          gsap.to(preloader, { 
-            opacity: 0, 
-            duration: 0.8, 
-            delay: 0.4, 
-            ease: 'power3.out',
+          gsap.to(preloader, {
+            opacity: 0,
+            duration: 0.45,
+            ease: 'power2.out',
             onComplete: () => {
               preloader.classList.add('is-hidden');
-              document.body.style.overflow = ''; // Unlock scroll
-              // ─── Trigger Hero Animations AFTER preloader ───
-              startHeroAnimations();
+              document.body.style.overflow = '';
+              requestAnimationFrame(startHeroAnimations);
             }
           });
         }
       });
-    });
+    };
+
+    if (prefersReducedMotion) {
+      preloaderBar.style.width = '80%';
+    } else {
+      const preTl = gsap.timeline();
+      preTl
+        .to(preloaderLogo, { opacity: 1, y: 0, duration: 0.45, ease: 'power2.out' })
+        .to(preloaderBar, { width: '42%', duration: 0.45, ease: 'power1.out' })
+        .to(preloaderBar, { width: '78%', duration: 0.9, ease: 'linear' });
+    }
+
+    window.addEventListener('load', () => {
+      requestAnimationFrame(finishPreloader);
+    }, { once: true });
+
+    setTimeout(finishPreloader, prefersReducedMotion ? 120 : 450);
 
     // ─── GSAP Hero Animations ───
     const startHeroAnimations = () => {
