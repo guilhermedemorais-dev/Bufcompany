@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buf Company — Digital Scale with Intelligence</title>
+  <meta name="description" content="Buf Company is the agency specialist in digital scale. Paid traffic, marketing strategy, and technology focused on ROI.">
+  
+  <!-- Preload Critical Video Assets -->
+  <link rel="preload" href="bg-desktop.mp4" as="video" type="video/mp4">
+  <link rel="preload" href="bg-mobile.mp4" as="video" type="video/mp4">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- GSAP + ScrollTrigger + Lenis -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <!-- ══════════ PRELOADER ══════════ -->
+  <div id="preloader" class="preloader">
+    <div class="preloader__inner">
+      <img src="logo.png" alt="Buf Company" class="preloader__logo">
+      <div class="preloader__bar-wrap">
+        <div class="preloader__bar" id="preloader-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ NAVBAR — LionLabs Style ══════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="#" class="nav__logo">
+          <img src="logo.png" alt="Buf Company" id="nav-logo">
+        </a>
+      </div>
+      <div class="nav__right" id="nav-menu">
+        <button class="nav__close" id="nav-close" aria-label="Fechar menu">✕</button>
+        <a href="#servicos" class="nav__link">Solutions</a>
+        <a href="#featured" class="nav__link">Partners</a>
+        <a href="#sobre-nos" class="nav__link">About Us</a>
+        <a href="#contato" class="nav__link">Contact</a>
+        <a href="#contato" class="nav__cta">Talk to an Expert</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════ HERO — Video BG + bottom-left text ══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__video-wrap">
+      <video class="hero__video hero__video--desktop" autoplay muted loop playsinline preload="auto">
+        <source src="bg-desktop.mp4" type="video/mp4">
+      </video>
+      <video class="hero__video hero__video--mobile" autoplay muted loop playsinline preload="auto">
+        <source src="bg-mobile.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content" id="hero-content">
+      <h1 class="hero__title h3" id="hero-title">Business <span class="highlight">Upgrade</span><br>Framework</h1>
+      <p class="hero__desc" id="hero-desc">Accelerate your business growth with Buf Company. We are specialists in data-driven marketing, paid traffic (Google Ads, Meta Ads), and web/app development focused on performance and ROI.</p>
+      <a href="#servicos" class="hero__scroll" id="hero-scroll">
+        <span>DISCOVER MORE</span>
+        <span class="hero__scroll-arrow">↓</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ══════════ FEATURED IN — Logo bar ══════════ -->
+  <section class="section" id="featured">
+    <div class="container">
+      <div class="featured__head gsap-fade">
+        <h2 class="featured__title">Official<br>Partners</h2>
+      </div>
+      <div class="featured__row">
+        <div class="featured__ticker">
+          <div class="featured__cell">Google Partner</div>
+          <div class="featured__cell">Meta Business</div>
+          <div class="featured__cell">RD Station</div>
+          <div class="featured__cell">HubSpot</div>
+          <div class="featured__cell">Shopify</div>
+          <div class="featured__cell">n8n</div>
+          <div class="featured__cell">ManyChat</div>
+          <!-- Loop Duplication -->
+          <div class="featured__cell" aria-hidden="true">Google Partner</div>
+          <div class="featured__cell" aria-hidden="true">Meta Business</div>
+          <div class="featured__cell" aria-hidden="true">RD Station</div>
+          <div class="featured__cell" aria-hidden="true">HubSpot</div>
+          <div class="featured__cell" aria-hidden="true">Shopify</div>
+          <div class="featured__cell" aria-hidden="true">n8n</div>
+          <div class="featured__cell" aria-hidden="true">ManyChat</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ THESIS — 4-column pillar cards ══════════ -->
+  <section class="section" id="servicos">
+    <div class="container">
+      <div class="thesis__heading gsap-fade">
+        <h2>Our areas of<br>expertise</h2>
+      </div>
+      <div class="home-intro__row-cards">
+        <div class="home-intro__card is--1">
+          <div class="home-intro__card-before"></div>
+          <div class="thesis-card__bg" style="background-image: url('assets/bg-midia-paga.png');"></div>
+          <div class="thesis-card__gradient"></div>
+          <div class="home-intro__card-border"></div>
+          <div class="home-intro__card-content">
+            <div class="thesis-card__text">
+              <h6>Paid Traffic<br>& PPC</h6>
+              <a href="traffic" class="card__link">Learn More</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="home-intro__card is--2">
+          <div class="home-intro__card-before"></div>
+          <div class="thesis-card__bg" style="background-image: url('assets/bg-strategy.png');"></div>
+          <div class="thesis-card__gradient"></div>
+          <div class="home-intro__card-border"></div>
+          <div class="home-intro__card-content">
+            <div class="thesis-card__text">
+              <h6>Strategy &<br>Planning</h6>
+              <a href="strategy" class="card__link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-intro__card is--3">
+          <div class="home-intro__card-before"></div>
+          <div class="thesis-card__bg" style="background-image: url('assets/bg-dev.png');"></div>
+          <div class="thesis-card__gradient"></div>
+          <div class="home-intro__card-border"></div>
+          <div class="home-intro__card-content">
+            <div class="thesis-card__text">
+              <h6>Web & App<br>Development</h6>
+              <a href="development" class="card__link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-intro__card is--4">
+          <div class="home-intro__card-before"></div>
+          <div class="thesis-card__bg" style="background-image: url('assets/bg-data.png');"></div>
+          <div class="thesis-card__gradient"></div>
+          <div class="home-intro__card-border"></div>
+          <div class="home-intro__card-content">
+            <div class="thesis-card__text">
+              <h6>Data &<br>Analytics</h6>
+              <a href="data" class="card__link">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="home-intro__card is--5">
+          <div class="home-intro__card-before"></div>
+          <div class="thesis-card__bg" style="background-image: url('assets/bg-automation.png');"></div>
+          <div class="thesis-card__gradient"></div>
+          <div class="home-intro__card-border"></div>
+          <div class="home-intro__card-content">
+            <div class="thesis-card__text">
+              <h6>Automação<br>I.A</h6>
+              <a href="automation" class="card__link">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ ABOUT US ══════════ -->
+  <section class="section section--surface" id="sobre-nos">
+    <div class="container">
+      <div class="offerings__header gsap-fade">
+        <span class="section__label">About Buf Company</span>
+        <h3>Our Culture<br>& Methodology</h3>
+      </div>
+
+      <!-- Single Card/Row for Company -->
+      <div class="offerings__row">
+        <div class="offerings__visual gsap-fade">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <div class="offerings__visual-glow"></div>
+          <img src="assets/office_photo.png" alt="Buf Company Office" class="is--cover">
+        </div>
+        <div class="offerings__text gsap-fade">
+          <h4>Your Digital<br>Scale Partner</h4>
+          <p class="is--transparent">Buf Company offers a complete ecosystem of technology and advanced marketing. We don't believe in one-size-fits-all approaches. Our technical team crafts bespoke strategies perfectly aligned with your corporate goals.</p>
+          <ul class="offerings__list">
+            <li>100% transparent communication with precise reporting</li>
+            <li>Fanatical focus on Return On Investment (ROI)</li>
+            <li>Enterprise-grade team of technical specialists</li>
+            <li>Contractual freedom: you stay for the results</li>
+          </ul>
+          <a href="#contato" class="btn">Talk to an Expert <span class="btn__arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PORTFOLIO — Light section with grid ══════════ -->
+  <section class="section section--light" id="clientes">
+    <div class="container">
+      <div class="portfolio__head gsap-fade">
+        <span class="section__label">Who we serve</span>
+        <h3>Clients &<br>Industries</h3>
+      </div>
+      <div class="portfolio__grid gsap-stagger">
+        <div class="portfolio__cell">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="portfolio__cell-text">B2B Enterprises</span>
+        </div>
+        <div class="portfolio__cell">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="portfolio__cell-text">E-commerce & Retail</span>
+        </div>
+        <div class="portfolio__cell">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="portfolio__cell-text">Creators & EdTech</span>
+        </div>
+        <div class="portfolio__cell">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="portfolio__cell-text">Franchises & Networks</span>
+        </div>
+        <div class="portfolio__cell">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="portfolio__cell-text">SaaS & Tech</span>
+        </div>
+        <div class="portfolio__cell">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="portfolio__cell-text">Healthcare & Clinics</span>
+        </div>
+        <div class="portfolio__cell">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="portfolio__cell-text">Education</span>
+        </div>
+        <div class="portfolio__cell">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="portfolio__cell-text">Real Estate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ DIFFERENTIALS — Numbered glassmorphic cards ══════════ -->
+  <section class="section" id="diferencial">
+    <div class="container">
+      <div class="diff__head gsap-fade">
+        <span class="section__label">Our Differentiators</span>
+        <h3>Why<br><span class="text-gold">Buf Company</span>?</h3>
+      </div>
+      <div class="diff__grid gsap-stagger">
+        <div class="diff-card">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="diff-card__num">01</span>
+          <h6 class="diff-card__title">100% Transparent</h6>
+          <p class="diff-card__text">Agile communication models and comprehensive reports. You track every invested penny.</p>
+        </div>
+        <div class="diff-card">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="diff-card__num">02</span>
+          <h6 class="diff-card__title">ROI Driven</h6>
+          <p class="diff-card__text">Focus on your bottom line. If we aren't generating scale, we are the first to diagnose and recalculate the route.</p>
+        </div>
+        <div class="diff-card">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="diff-card__num">03</span>
+          <h6 class="diff-card__title">Enterprise Grade Team</h6>
+          <p class="diff-card__text">Data engineers, developers, and traffic managers with enterprise market standards.</p>
+        </div>
+        <div class="diff-card">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="diff-card__num">04</span>
+          <h6 class="diff-card__title">Proprietary Technology</h6>
+          <p class="diff-card__text">Bespoke dashboards, automations, and integrations for maximum operational efficiency.</p>
+        </div>
+        <div class="diff-card">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="diff-card__num">05</span>
+          <h6 class="diff-card__title">Omni-Platform</h6>
+          <p class="diff-card__text">Integrated management across Google, Meta, TikTok, LinkedIn, and programmatic environments.</p>
+        </div>
+        <div class="diff-card">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <span class="diff-card__num">06</span>
+          <h6 class="diff-card__title">Long-Term Partnership</h6>
+          <p class="diff-card__text">We aren't service providers. We are strategic partners for the sustainable growth of our clients.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TESTIMONIALS ══════════ -->
+  <section class="section section--surface" id="depoimentos">
+    <div class="container">
+      <div class="testi__head gsap-fade">
+        <span class="section__label">Testimonials</span>
+        <h3>What our<br><span class="text-gold">clients</span> say</h3>
+      </div>
+      <div class="testi__grid gsap-stagger">
+        <div class="testi-card">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <div class="testi-card__quote">"</div>
+          <p class="testi-card__text">The Buf Company team was essential to improving our Meta Ads operations, data engineering, and inbound traffic from Google. The technical detail in our campaigns made our revenue grow substantially.</p>
+          <span class="testi-card__author">— Sales Director in E-commerce</span>
+        </div>
+        <div class="testi-card">
+          <div class="corner corner--tl"></div><div class="corner corner--br"></div>
+          <div class="testi-card__quote">"</div>
+          <p class="testi-card__text">They are highly professional, fast, and perfectly understand how to translate paid traffic into concrete results. In a short time, their strategy continuously improved our Return On Investment (ROI).</p>
+          <span class="testi-card__author">— Business Leader (B2B)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA — Dual ══════════ -->
+  <section class="section section--surface" id="contato">
+    <div class="cta__video-wrap">
+      <video class="hero__video hero__video--desktop" autoplay muted loop playsinline preload="auto">
+        <source src="bg-desktop.mp4" type="video/mp4">
+      </video>
+      <video class="hero__video hero__video--mobile" autoplay muted loop playsinline preload="auto">
+        <source src="bg-mobile.mp4" type="video/mp4">
+      </video>
+      <div class="cta__overlay"></div>
+    </div>
+    <div class="container">
+      <div class="cta__inner gsap-fade">
+        <div class="cta__left">
+          <h2>Ready to<br>scale your<br>results</h2>
+        </div>
+        <div class="cta__right">
+          <a href="#contato" class="btn js-open-modal">
+            TALK TO AN EXPERT <span class="btn__arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__col-brand">
+          <img src="logo.png" alt="Buf Company">
+        </div>
+        <div>
+          <span class="footer__col-label">Sales</span><br><br>
+          <a href="mailto:contact@bufcompany.com" class="footer__col-link">contact@bufcompany.com</a>
+        </div>
+        <div>
+          <span class="footer__col-label">Support</span><br><br>
+          <a href="mailto:support@bufcompany.com" class="footer__col-link">support@bufcompany.com</a>
+        </div>
+        <div>
+          <span class="footer__col-label">WhatsApp</span><br><br>
+          <a href="https://wa.me/5500000000000" target="_blank" class="footer__col-link">Start chat</a>
+        </div>
+      </div>
+      <p class="footer__disclaimer">This website is a general communication intended for informational purposes only and should not be interpreted as advice or recommendation. The results obtained may vary depending on each client's sector, investment, and market context.</p>
+      <div class="footer__bottom">
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy Policy</a>
+          <a href="#" class="footer__bottom-link">Terms of Use</a>
+        </div>
+        <p class="footer__bottom-link">© 2026 Buf Company®</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       JAVASCRIPT — GSAP ScrollTrigger + Lenis Smooth Scroll
+       ══════════════════════════════════════════════════════════════ -->
+  <!-- ══════════ CONTACT MODAL ══════════ -->
+  <div id="contact-modal" class="modal">
+    <div class="modal__overlay" id="modal-overlay"></div>
+    <div class="modal__container">
+      <button class="modal__close" id="modal-close">✕</button>
+      <div class="modal__header">
+        <h4>Talk to an Expert</h4>
+        <p class="is--xs text-gold">Start your business upgrade today.</p>
+      </div>
+      <form class="modal__form" id="contact-form" action="submit-form.php" method="post" data-contact-form>
+        <div class="form-group">
+          <label class="form-label" for="name">Full Name</label>
+          <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Corporate Email</label>
+          <input type="email" id="email" name="email" class="form-input" placeholder="name@company.com" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="company">Company</label>
+          <input type="text" id="company" name="company" class="form-input" placeholder="Your company name">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">How can we help?</label>
+          <textarea id="message" name="message" class="form-textarea" placeholder="Tell us about your project..." required></textarea>
+        </div>
+        <div class="form-honeypot" aria-hidden="true">
+          <label for="company-website">Website</label>
+          <input type="text" id="company-website" name="website" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="btn" style="width: 100%; border-radius: 0;">SUBMIT REQUEST <span class="btn__arrow">→</span></button>
+        <p class="form-status" data-form-status aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // ─── Modal Logic ───
+    const modal = document.getElementById('contact-modal');
+    const modalClose = document.getElementById('modal-close');
+    const modalOverlay = document.getElementById('modal-overlay');
+
+    const openModal = (e) => {
+      if (e) e.preventDefault();
+      // On small screens, redirect to contact page instead of modal
+      if (window.innerWidth < 768) {
+        window.location.href = 'contact';
+        return;
+      }
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden'; // Lock scroll
+    };
+
+    const closeModal = () => {
+      modal.classList.remove('is-open');
+      document.body.style.overflow = ''; // Unlock scroll
+    };
+
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+
+    // Global trigger for Modal
+    document.querySelectorAll('[href="#contato"], .js-open-modal').forEach(btn => {
+      btn.addEventListener('click', openModal);
+    });
+
+    // ─── Lenis Smooth Scroll ───
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Sync Lenis with GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+    gsap.ticker.lagSmoothing(0);
+
+    // ─── Navbar scroll effect ───
+    const nav = document.getElementById('nav');
+    ScrollTrigger.create({
+      start: 'top -60',
+      onUpdate: (self) => {
+        nav.classList.toggle('scrolled', self.progress > 0);
+      }
+    });
+
+    // ─── Mobile menu ───
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navEl = document.getElementById('nav');
+
+    // Move nav-menu outside nav__inner to avoid backdrop-filter containing block
+    if (window.innerWidth <= 768) {
+      navEl.appendChild(navMenu);
+    }
+    window.addEventListener('resize', () => {
+      if (window.innerWidth <= 768) {
+        if (navMenu.parentElement !== navEl) navEl.appendChild(navMenu);
+      } else {
+        const navInner = document.querySelector('.nav__inner');
+        if (navMenu.parentElement !== navInner) navInner.appendChild(navMenu);
+      }
+    });
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('open');
+      document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    // Close button
+    const navClose = document.getElementById('nav-close');
+    navClose.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ─── Preloader Logic ───
+    const preloader = document.getElementById('preloader');
+    const preloaderBar = document.getElementById('preloader-bar');
+    const preloaderLogo = document.querySelector('.preloader__logo');
+    
+    document.body.style.overflow = 'hidden'; // Lock scroll
+
+    const preTl = gsap.timeline();
+    preTl
+      .to(preloaderLogo, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' })
+      .to(preloaderBar, { width: '40%', duration: 1, ease: 'power1.inOut' })
+      .to(preloaderBar, { width: '85%', duration: 3, ease: 'linear' }); // Slower crawl for real-ish feel
+
+    window.addEventListener('load', () => {
+      gsap.to(preloaderBar, { 
+        width: '100%', 
+        duration: 0.4, 
+        ease: 'power2.out',
+        onComplete: () => {
+          gsap.to([preloaderLogo, preloaderBar.parentElement], { 
+            opacity: 0, 
+            y: -10, 
+            duration: 0.5, 
+            ease: 'power3.in' 
+          });
+          gsap.to(preloader, { 
+            opacity: 0, 
+            duration: 0.8, 
+            delay: 0.4, 
+            ease: 'power3.out',
+            onComplete: () => {
+              preloader.classList.add('is-hidden');
+              document.body.style.overflow = ''; // Unlock scroll
+              // ─── Trigger Hero Animations AFTER preloader ───
+              startHeroAnimations();
+            }
+          });
+        }
+      });
+    });
+
+    // ─── GSAP Hero Animations ───
+    const startHeroAnimations = () => {
+      const heroTl = gsap.timeline({ delay: 0.1 });
+      heroTl
+        .from('#hero-title', { y: 60, opacity: 0, duration: 1.2, ease: 'power3.out' })
+        .from('#hero-desc', { y: 40, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=0.6')
+        .from('#hero-scroll', { y: 20, opacity: 0, duration: 0.6, ease: 'power3.out' }, '-=0.4')
+        .from('#nav', { y: -30, opacity: 0, duration: 0.8, ease: 'power3.out' }, '-=1');
+    };
+
+    // ─── GSAP ScrollTrigger: Fade elements ───
+    gsap.utils.toArray('.gsap-fade').forEach((el) => {
+      gsap.to(el, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        }
+      });
+    });
+
+    // ─── GSAP ScrollTrigger: Stagger children ───
+    gsap.utils.toArray('.gsap-stagger').forEach((container) => {
+      const children = container.children;
+      gsap.to(children, {
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
+        stagger: 0.1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: container,
+          start: 'top 85%',
+          toggleActions: 'play none none none'
+        }
+      });
+    });
+
+    // ─── Video Auto-Play Fallback ───
+    document.querySelectorAll('video').forEach(v => {
+      v.play().catch(() => {
+        // Fallback for strict browsers: try playing on first interaction if blocked
+        window.addEventListener('click', () => v.play(), { once: true });
+      });
+    });
+
+    // ─── Smooth anchor scrolling via Lenis ───
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          lenis.scrollTo(target, { offset: -100 });
+        }
+      });
+    });
+  </script>
+  <script src="form-handler.js"></script>
+</body>
+</html>

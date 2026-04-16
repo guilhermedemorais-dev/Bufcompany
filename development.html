@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology & Development — Buf Company</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+</head>
+<body class="is--dark">
+
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <div class="nav__left">
+        <a href="/" class="nav__logo">
+          <img src="logo.png" alt="Buf Company" id="nav-logo">
+        </a>
+      </div>
+      <div class="nav__right" id="nav-menu">
+        <button class="nav__close" id="nav-close" aria-label="Fechar menu">✕</button>
+        <a href="/#servicos" class="nav__link">Solutions</a>
+        <a href="/#featured" class="nav__link">Partners</a>
+        <a href="/#sobre-nos" class="nav__link">About Us</a>
+        <a href="/#contato" class="nav__link">Contact</a>
+        <a href="/contact" class="nav__cta">Talk to an Expert</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="sub-hero">
+    <div class="sub-hero__img">
+      <img src="assets/hero-development.png" alt="Development">
+    </div>
+    <div class="sub-hero__overlay"></div>
+    <div class="container sub-hero__content">
+      <div class="gsap-fade-up">
+        <span class="section__label">Engineering & Tech</span>
+        <h1 class="h1">Technology &<br><span class="text-gold">Digital Development</span></h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="blog-content">
+    <div class="container">
+      <div class="blog-content__inner gsap-fade">
+        <article class="blog-article">
+          <h2>The engine of your digital business.</h2>
+          <p>Every marketing strategy needs a solid technical foundation. At Buf Company, we build digital products that aren't just visually stunning, but are optimized for extreme speed, searchability, and high-conversion environments.</p>
+          
+          <h3>Beyond a simple website.</h3>
+          <p>We approach technology with a performance mindset. Our developers work in sync with data engineers and traffic managers to ensure that every landing page or mobile app from Buf Company is fully traceable and built to scale.</p>
+          
+          <ul>
+            <li><strong>Institutional Websites & Landing Pages:</strong> Ultra-fast, high-converting interfaces designed to turn visitors into leads.</li>
+            <li><strong>Custom Mobile Apps:</strong> Dedicated iOS and Android solutions to digitalize your service and loyalty programs.</li>
+            <li><strong>Enterprise E-commerce:</strong> Robust, secure, and scalable stores built on modern platforms like WordPress with specialized performance layers.</li>
+            <li><strong>Performance Optimization:</strong> Critical improvements to Core Web Vitals to improve search rankings and user retention.</li>
+          </ul>
+
+          <h3>Our Technical Stack: Standard for Scalability</h3>
+          <p>We use modern, enterprise-grade technologies to build our products. Whether it's a lightweight React application or a complex WordPress multisite network, our projects are modular, maintainable, and built for a mobile-first world.</p>
+          
+          <div style="margin-top: 4em; padding: 3em; background: var(--color-surface); border: 1px solid var(--color-border);">
+            <h4>Do you have a project in mind?</h4>
+            <p class="is--xs">Our technical team is ready to translate your goals into lines of code and high-performance pixels.</p>
+            <a href="/contact" class="btn js-open-modal">Consult with an Expert <span class="btn__arrow">→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom">
+        <div class="footer__copy">© 2026 Buf Company. All rights reserved.</div>
+        <div class="footer__bottom-links">
+          <a href="#" class="footer__bottom-link">Privacy Policy</a>
+          <a href="#" class="footer__bottom-link">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const lenis = new Lenis();
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // Initial animations
+    gsap.to('.gsap-fade-up', { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' });
+    gsap.to('.blog-content__inner', { y: 0, opacity: 1, duration: 1, delay: 0.4, ease: 'power3.out' });
+
+    // ─── Navbar Logic (Sync from index.html) ───
+    const nav = document.getElementById('nav');
+    if (nav) {
+      window.addEventListener('scroll', () => {
+        nav.classList.toggle('scrolled', window.scrollY > 60);
+      });
+    }
+
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navClose = document.getElementById('nav-close');
+
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', () => {
+        navMenu.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    if (navClose && navMenu) {
+      navClose.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    }
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  </script>
+
+</body>
+</html>

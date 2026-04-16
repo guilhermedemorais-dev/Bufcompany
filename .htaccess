@@ -1,0 +1,28 @@
+DirectoryIndex index.php index.html
+
+Options -MultiViews
+
+<FilesMatch "^email-config\.php(\.example)?$">
+    Require all denied
+</FilesMatch>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# Canonical root without explicit index file.
+RewriteCond %{THE_REQUEST} \s/+index(?:\.html)?(?:[?\s]|$) [NC]
+RewriteRule ^index(?:\.html)?$ / [R=301,L]
+
+# Canonical content pages without the .html suffix.
+RewriteCond %{THE_REQUEST} \s/+([^.?\s]+)\.html(?:[?\s]|$) [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Let Apache serve existing files directly.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Serve extensionless routes from their matching .html files.
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>

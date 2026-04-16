@@ -1,0 +1,14 @@
+<?php
+declare(strict_types=1);
+
+return [
+    'SMTP_HOST' => 'smtp.hostinger.com',
+    'SMTP_PORT' => 465,
+    'SMTP_ENCRYPTION' => 'ssl',
+    'SMTP_USERNAME' => 'contact@bufcompany.com',
+    'SMTP_PASSWORD' => 'PUT_THE_MAILBOX_PASSWORD_HERE',
+    'SMTP_TIMEOUT' => 15,
+    'SMTP_FROM_EMAIL' => 'contact@bufcompany.com',
+    'SMTP_FROM_NAME' => 'Buf Company Website',
+    'SMTP_RECIPIENT_EMAIL' => 'contact@bufcompany.com',
+];
